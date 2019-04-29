@@ -1,7 +1,10 @@
 {
   "name": "cbor-body-parser",
-  "version": "0.1.0",
   "description": "A cbor body parser for express",
+  "contributors": [
+      "Sven Eliasson <sven.eliasson@gmail.com>"
+  ],
+  "version": "0.1.0",
   "main": "index.js",
   "directories": {
     "test": "test"
