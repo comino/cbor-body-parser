@@ -10,7 +10,7 @@ const express = require("express");
 const bodyParser = require("body-parser")
 bodyParser.cbor = cborParser;
 
-describe('A2 cborparser as express app', function () {
+describe('cborparser as express app', function () {
     it('should parse json', function (done) {
         request(createExpressServer())
             .post('/')
