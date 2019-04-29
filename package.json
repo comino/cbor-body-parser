@@ -1,0 +1,48 @@
+{
+  "name": "cbor-body-parser",
+  "version": "0.1.0",
+  "description": "A cbor body parser for express",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cbor": "^4.1.5"
+  },
+  "devDependencies": {
+    "eslint": "5.16.0",
+    "eslint-config-standard": "12.0.0",
+    "eslint-plugin-import": "2.17.2",
+    "eslint-plugin-markdown": "1.0.0",
+    "eslint-plugin-node": "8.0.1",
+    "eslint-plugin-promise": "4.1.1",
+    "eslint-plugin-standard": "4.0.0",
+    "express": "^4.16.4",
+    "istanbul": "0.4.5",
+    "methods": "1.1.2",
+    "mocha": "6.1.4",
+    "safe-buffer": "5.1.2",
+    "should": "^13.2.3",
+    "supertest": "4.0.2",
+    "underscore": "^1.9.1"
+  },
+  "scripts": {
+    "test": "mocha --reporter spec --check-leaks --bail test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/comino/cbor-body-parser.git"
+  },
+  "keywords": [
+    "body-parser",
+    "express",
+    "cbor"
+  ],
+  "author": "Sven Eliasson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/comino/cbor-body-parser/issues"
+  },
+  "homepage": "https://github.com/comino/cbor-body-parser#readme"
+}
