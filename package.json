@@ -1,31 +1,31 @@
 {
   "name": "cbor-body-parser",
-  "description": "A cbor body parser for express",
+  "description": "A simple cbor body parser for express",
   "contributors": [
-      "Sven Eliasson <sven.eliasson@gmail.com>"
+    "Sven Eliasson <sven.eliasson@gmail.com>"
   ],
-  "version": "0.1.1",
+  "version": "1.0.0",
   "main": "index.js",
   "directories": {
     "test": "test"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
-    "cbor": "^4.1.5"
+    "cbor": "^4.3.0"
   },
   "devDependencies": {
-    "eslint": "5.16.0",
-    "eslint-config-standard": "12.0.0",
-    "eslint-plugin-import": "2.17.2",
+    "eslint": "6.2.2",
+    "eslint-config-standard": "14.1.0",
+    "eslint-plugin-import": "2.18.2",
     "eslint-plugin-markdown": "1.0.0",
-    "eslint-plugin-node": "8.0.1",
-    "eslint-plugin-promise": "4.1.1",
-    "eslint-plugin-standard": "4.0.0",
-    "express": "^4.16.4",
+    "eslint-plugin-node": "9.1.0",
+    "eslint-plugin-promise": "4.2.1",
+    "eslint-plugin-standard": "4.0.1",
+    "express": "^4.17.1",
     "istanbul": "0.4.5",
     "methods": "1.1.2",
-    "mocha": "6.1.4",
-    "safe-buffer": "5.1.2",
+    "mocha": "6.2.0",
+    "safe-buffer": "5.2.0",
     "should": "^13.2.3",
     "supertest": "4.0.2",
     "underscore": "^1.9.1"
@@ -37,12 +37,18 @@
     "type": "git",
     "url": "git+https://github.com/comino/cbor-body-parser.git"
   },
+  "engines": {
+    "node": ">=6.0.0"
+  },
   "keywords": [
     "body-parser",
     "express",
     "cbor"
   ],
-  "author": "Sven Eliasson",
+  "author": {
+    "name": "Sven Eliasson",
+    "email": "Sven.Eliasson@gmail.com"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/comino/cbor-body-parser/issues"
