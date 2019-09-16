@@ -30,7 +30,6 @@ app.listen(3000, function () {
 	  console.log('Example app listening on port 3000!');
 });
 ```
-
 ## Client side test 
 ```sh
 $ gem install cbor-diag

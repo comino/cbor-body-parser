@@ -1,13 +1,11 @@
-const http = require('http');
 const should = require('should');
-const methods = require('methods');
 const request = require('supertest');
 const cborParser = require('..');
 const cbor = require("cbor");
 
 const _ = require("underscore");
 const express = require("express");
-const bodyParser = require("body-parser")
+const bodyParser = require("body-parser");
 bodyParser.cbor = cborParser;
 
 describe('cborparser as express app', function () {
@@ -19,7 +17,10 @@ describe('cborparser as express app', function () {
             .expect(200)
             .end( (err, res) => {
                 should.exist(res.body);
-                should.exist(res.body.user);
+		let data = res.body;
+                should.exist(data);
+		should.exist(data.cbor); 
+		should(data.cbor).be.equal(false);
                 done();
             });
     });
@@ -35,11 +36,13 @@ describe('cborparser as express app', function () {
                 const decodedData = cbor.decode(res.body);
                 should.exist(decodedData);
                 should.exist(decodedData.user);
+		should.exist(decodedData.cbor); 
+		should(decodedData.cbor).be.equal(true);
                 should(decodedData.user).be.equal("tobi");
                 done();
             });
     });
-    it('should reject cbor with a too big body', function (done) {
+    it('should reject cbor with a too big body according to limit option', function (done) {
         const bigPayload = {
                     "user":"tobi", 
                     "1": "dsfjkhaosdfhsijdhfaisdhfakjsdhfklajshdfkjahsdflkasdkjsofgjsd9u239ruaosidfa0shfdaos09jdf",
@@ -81,12 +84,16 @@ function createExpressServer() {
 
     app.post("/", (req, res, next) => {
         if( req.is("application/cbor")){
-            const encodedData = cbor.encode(req.body);
+	    let returnData = req.body; 
+            returnData.cbor = true; 
+            const encodedData = cbor.encode(returnData);
             res.setHeader("content-type", "application/cbor");
             res.setHeader('content-length', _.size(encodedData));
             return res.status(200).end(encodedData);
         }else{
-            return res.status(200).json(req.body);
+	    let returnData = req.body; 
+            returnData.cbor = false; 
+            return res.status(200).json(returnData);
         }
     });
     return app;
