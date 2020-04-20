@@ -69,7 +69,7 @@ describe('cborparser as express app', function () {
 
 function createExpressServer() {
     const app = express();
-    app.use(bodyParser.json());
+    app.use(bodyParser.json({ limit: "4mb"}));
     app.use(bodyParser.cbor({ limit: '500B'}));
 
     app.use((err, req, res, next) => {

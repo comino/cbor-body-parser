@@ -4,31 +4,31 @@
   "contributors": [
     "Sven Eliasson <sven.eliasson@gmail.com>"
   ],
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "directories": {
     "test": "test"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
-    "cbor": "^4.3.0"
+    "cbor": "^5.0.2"
   },
   "devDependencies": {
-    "eslint": "6.2.2",
-    "eslint-config-standard": "14.1.0",
-    "eslint-plugin-import": "2.18.2",
-    "eslint-plugin-markdown": "1.0.0",
-    "eslint-plugin-node": "9.1.0",
+    "eslint": "6.8.0",
+    "eslint-config-standard": "14.1.1",
+    "eslint-plugin-import": "2.20.2",
+    "eslint-plugin-markdown": "1.0.2",
+    "eslint-plugin-node": "11.1.0",
     "eslint-plugin-promise": "4.2.1",
     "eslint-plugin-standard": "4.0.1",
     "express": "^4.17.1",
     "istanbul": "0.4.5",
     "methods": "1.1.2",
-    "mocha": "6.2.0",
+    "mocha": "7.1.1",
     "safe-buffer": "5.2.0",
     "should": "^13.2.3",
     "supertest": "4.0.2",
-    "underscore": "^1.9.1"
+    "underscore": "^1.10.2"
   },
   "scripts": {
     "test": "mocha --reporter spec --check-leaks --bail test"
